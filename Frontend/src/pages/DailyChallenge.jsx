@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card, Button, Form } from 'react-bootstrap';
 
-// Sample questions
 const challengeTypes = [
   { type: "spelling", question: "Can you spell the word 'apple'?", answer: "apple" },
   { type: "math", question: "What is 3 + 2?", answer: "5" },
@@ -11,7 +10,6 @@ const challengeTypes = [
   { type: "gk", question: "Which animal is known as the king of the jungle?", answer: "lion" }
 ];
 
-// Function to get today's index based on the day of the year
 const getDailyChallengeIndex = () => {
   const today = new Date();
   const start = new Date(today.getFullYear(), 0, 0);
