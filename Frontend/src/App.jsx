@@ -6,6 +6,9 @@ import Info from './pages/Info';
 import Layout from "./pages/Layout";
 import I from './pages/I';
 import AlphabetAdventure from './pages/AlphabetAdventure';
+import NumberFun from './pages/NumberFun';
+import StoryTime from './pages/Story';
+import DailyChallenge from './pages/DailyChallenge';
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
           <Route path="/info" element={<Info />} />
           <Route path="/first_front" element={<I />} />
           <Route path="/alphabets" element={<AlphabetAdventure />} />
+          <Route path="/numbers" element={<NumberFun />} />
+          <Route path="/story" element={<StoryTime />} />
+          <Route path="/daily" element={<DailyChallenge />} />
         </Routes>
       </Layout>
     </Router>

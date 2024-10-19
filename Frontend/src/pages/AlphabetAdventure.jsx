@@ -65,8 +65,7 @@ const AlphabetAdventure = () => {
     if (currentLetter) {
       const correctOption = objectsForLetters[currentLetter];
       const wrongOptions = getRandomWrongOptions(currentLetter);
-      
-      // Mix correct option with wrong ones
+
       const allOptions = [...wrongOptions, correctOption].sort(() => Math.random() - 0.5);
       setOptions(allOptions);
     }
