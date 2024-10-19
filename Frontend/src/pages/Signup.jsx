@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Signup.css';
+import axios from "axios";
 
 function Signup() {
     const [formData, setFormData] = useState({
