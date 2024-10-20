@@ -15,7 +15,8 @@ const I = () => {
       image: "https://png.pngtree.com/png-vector/20230906/ourmid/pngtree-puppy-labrador-retriever-cute-dog-animal-png-image_9993729.png",
       description: "A loyal, friendly animal." },
     { word: "Apple",
-      image: "https://i0.wp.com/myfreedrawings.com/wp-content/uploads/2022/07/Red-Apple-Healthy-Cute-Simple-Red-Apple-Clipart-PNG.png?resize=640%2C734&ssl=1", description: "A sweet, crunchy fruit." }
+      image: "https://i0.wp.com/myfreedrawings.com/wp-content/uploads/2022/07/Red-Apple-Healthy-Cute-Simple-Red-Apple-Clipart-PNG.png?resize=640%2C734&ssl=1",
+      description: "A sweet, crunchy fruit." }
     // Add more words and descriptions here
   ];
 
@@ -47,14 +48,23 @@ const I = () => {
   return (
     <Container fluid className="front-page p-5">
       <header className="text-center mb-5">
-        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/robot-3d-icon-download-in-png-blend-fbx-gltf-file-formats--ai-technology-machine-bot-activity-pack-science-icons-7746758.png" alt="AI Learning Buddy" className="mb-3" width={150} />
+      <img 
+          src="https://cdn3d.iconscout.com/3d/premium/thumb/robot-3d-icon-download-in-png-blend-fbx-gltf-file-formats--ai-technology-machine-bot-activity-pack-science-icons-7746758.png" 
+          alt="AI Learning Buddy" 
+          className="mb-3" 
+          width={150} 
+          style={{ 
+            display: 'inline-block', 
+            animation: 'spin 2s linear'
+          }} 
+        />        
         <h1 className="mb-3">Welcome to Your Learning Buddy!</h1>
         <h2 className="text-muted">Learning is Fun with Your AI Friend!</h2>
       </header>
 
       <Row className="align-items-center text-center mb-5">
         <Col xs={12} md={6} className="ai-mascot">
-          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/cute-robot-say-hello-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--hi-bot-pack-science-technology-illustrations-4721951.png?f=webp  " alt="AI Mascot" className="img-fluid" />
+          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/cute-robot-say-hello-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--hi-bot-pack-science-technology-illustrations-4721951.png?f=webp" alt="AI Mascot" className="img-fluid" />
         </Col>
         <Col xs={12} md={6}>
           <h3 className="mb-4">Hi {studentName}! Ready to learn and play?</h3>
@@ -139,6 +149,14 @@ const I = () => {
           </Card>
         </Col>
       </Row>
+      <style>
+        {`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(720deg); } /* 720 degrees for 2 full rotations */
+          }
+        `}
+      </style>
     </Container>
   );
 };
